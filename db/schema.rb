@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170510065848) do
+ActiveRecord::Schema.define(version: 20170511122303) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.integer  "user_id"
@@ -88,10 +88,14 @@ ActiveRecord::Schema.define(version: 20170510065848) do
     t.string   "identify_number"
     t.integer  "role"
     t.integer  "school_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.string   "email",               default: "", null: false
+    t.string   "encrypted_password",  default: "", null: false
+    t.datetime "remember_created_at"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["identify_number"], name: "index_users_on_identify_number"
     t.index ["school_id"], name: "index_users_on_school_id"
-    t.index [nil], name: "index_users_on_user_code"
   end
 
 end
