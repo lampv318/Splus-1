@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true, length: {maximum: 50}
   validates :identify_number, presence: true, length: {maximum: 8},
-    numericality: {only_integer: true}
+    numericality: {only_integer: true}, uniqueness: true
   validates :password, presence: true, length: {minimum: 6}
 
   has_many :comments
@@ -17,9 +17,10 @@ class User < ApplicationRecord
   has_many :classrooms, through: :participations
 
   belongs_to :school
+
   private
 
   def use_identify_to_create_email
-    self.email = "#{self.identify_number}@student.hust.edu.vn}"
+    self.email = "#{self.identify_number}@student.hust.edu.vn"
   end
 end

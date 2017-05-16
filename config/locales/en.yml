@@ -9,3 +9,27 @@ en:
       bookmarks: "Bookmarks"
       notification: "Notification"
       profile: "Profile"
+      sign_in: "Log in"
+      sign_up: "Register"
+      sign_out: "Sign out"
+  devise:
+    registrations:
+      new:
+        sign_up: "Sign up"
+        name: "Name"
+        department: "Department"
+        password: "Password"
+        confirmation: "Confirmation"
+        identify_number: "Identify number"
+    sessions:
+      new:
+        sign_in: "Sign in"
+        remember_me: "Remember me"
+        identify_number: "Identify number"
+        password: "Password"
+  users:
+    danger: "User not exist"
+    show:
+      name: "Name"
+      email: "Email"
+      identify_number: "Identify number"
