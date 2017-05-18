@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  skip_before_action :authenticate_user!, except: :show
+
   def show
     if valid_page?
       render template: "pages/#{params[:page]}"

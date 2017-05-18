@@ -1,4 +1,9 @@
 <% provide :title, @user.name %>
-<h1> <%= t(".name") %> <%= @user.name %> </h1>
-<h1> <%= t(".identify_number") %> <%= @user.identify_number %> </h1>
-<h1> <%= t(".email") %> <%= @user.email %> </h1>
+<h1> <%= t ".name" %>: <%= @user.name %> </h1>
+<h1> <%= t ".identify_number" %>: <%= @user.identify_number %> </h1>
+<h1> <%= t ".email" %>: <%= @user.email %> </h1>
+<h1>
+<% @user.classrooms.each do |classroom| %>
+  <li><%= link_to classroom.class_code, classroom %></li>
+<% end %>
+</h1>

@@ -1,11 +1,11 @@
 en:
   pages:
     home:
-      home: "Home"
+      title: "Home"
   layouts:
     header:
       s_plus: "S Plus"
-      group: "Group"
+      classes: "Classes"
       bookmarks: "Bookmarks"
       notification: "Notification"
       profile: "Profile"
@@ -33,3 +33,14 @@ en:
       name: "Name"
       email: "Email"
       identify_number: "Identify number"
+  classrooms:
+    danger: "Classroom not exist"
+    index:
+      title: "All class"
+    show:
+      title: "Class"
+    introduction:
+      title: <h3> Here will show all info about this calss </h3>
+    posts:
+      all_posts: <h3> Here will show all posts of class </h3>
+      order_by_date: <h3> Here will order by date of all posts </h3>
