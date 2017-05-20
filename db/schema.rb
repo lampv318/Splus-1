@@ -94,7 +94,7 @@ ActiveRecord::Schema.define(version: 20170511122303) do
     t.string   "encrypted_password",  default: "", null: false
     t.datetime "remember_created_at"
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["identify_number"], name: "index_users_on_identify_number"
+    t.index ["identify_number"], name: "index_users_on_identify_number", unique: true
     t.index ["school_id"], name: "index_users_on_school_id"
   end
 
