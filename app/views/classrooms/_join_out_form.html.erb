@@ -1,0 +1,5 @@
+<% if @classroom.users.include? current_user %>
+  <%= render "out" %>
+<% else %>
+  <%= render "join" %>
+<% end %>

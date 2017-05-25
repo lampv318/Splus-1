@@ -1,6 +1,7 @@
 <% provide :title, @classroom.class_code %>
 <h1><%= t ".title" %> <%= @classroom.class_code %></h1>
-<% if @classroom.users.include?(current_user) %>
+<%= render "join_out_form" %>
+<% if @classroom.users.include? current_user %>
   <%= render "classrooms/posts" %>
 <% else %>
   <%= render "classrooms/introduction" %>
