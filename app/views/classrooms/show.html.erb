@@ -2,7 +2,14 @@
 <h1><%= t ".title" %> <%= @classroom.class_code %></h1>
 <%= render "join_out_form" %>
 <% if @classroom.users.include? current_user %>
+  <section class="user_info">
+    <%= render "shared/user_info" %>
+  </section>
+  <section class="post_form">
+    <%= render "shared/post_form" %>
+  </section>
   <%= render "classrooms/posts" %>
 <% else %>
   <%= render "classrooms/introduction" %>
 <% end %>
+

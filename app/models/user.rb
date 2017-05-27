@@ -11,7 +11,7 @@ class User < ApplicationRecord
   validates :password, presence: true, length: {minimum: 6}
 
   has_many :comments
-  has_many :posts
+  has_many :posts, dependent: :destroy
   has_many :bookmarks
   has_many :participations
   has_many :classrooms, through: :participations

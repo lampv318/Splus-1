@@ -1,8 +1,14 @@
 <div class="row">
-  <div class="col-sm-10">
+  <div class="col-sm-9">
     <%= t(".all_posts").html_safe %>
+    <% if @classroom.posts.any? %>
+      <h3>Posts (<%= @classroom.posts.count %>)</h3>
+      <ol class="posts">
+        <%= render @posts %>
+      </ol>
+    <% end %>
   </div>
-  <div class="col-sm-2">
+  <div class="col-sm-3">
     <%= t(".order_by_date").html_safe %>
   </div>
 </div>

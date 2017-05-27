@@ -32,6 +32,15 @@ some_user = users[1..40]
 some_class.each do |c|
   Participation.create! user_id: user.id, classroom_id: c.id
 end
+
 some_user.each do |u|
   Participation.create! user_id: u.id, classroom_id: classroom.id
+end
+
+users = User.order(:created_at).take(6)
+50.times do
+  title = Faker::Lorem.sentence(5)
+  content = Faker::Lorem.paragraph(20)
+  users.each {|user| user.posts.create! title: title, classroom_id: 2,
+    content: content}
 end
