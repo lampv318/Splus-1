@@ -5,10 +5,14 @@
     <p> <%= f.text_area :content, placeholder: "Compose new post..." %> </p>
     <div> <%= f.hidden_field :classroom_id, value: params[:id] %> </div>
   </div>
-  <%= f.submit "Post", class: "btn btn-primary" %>
-  <span class="picture">
-    <%= f.file_field :picture, accept: "image/jpeg,image/gif,image/png" %>
-  </span>
+  <form class = "form-inline">
+    <div class="form-group">
+    <%= f.submit "Post", class: "btn btn-primary" %>
+    <span class="picture ">
+      <%= f.file_field :picture, accept: "image/jpeg,image/gif,image/png" %>
+    </span>
+    </div>
+  </form>
 <% end %>
 
 <script type="text/javascript">

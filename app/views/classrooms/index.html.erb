@@ -1,7 +1,9 @@
 <% provide :title, t(".title") %>
-<h1><%= t ".title" %></h1>
-<ul>
-  <% @classrooms.each do |classroom| %>
+ <h1><%= t ".title" %></h1>
+	<input type="text" class="live-search-box" placeholder="search here" />
+	<ul class="live-search-list">
+
+	 <% @classrooms.each do |classroom| %>
     <li><%= link_to classroom.class_code, classroom %></li>
   <% end %>
-</ul>
+	</ul>
